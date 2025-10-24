@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import '../src/assets/css/style.scss';
-import '../src/assets/css/normalize.scss';
 import { RouterProvider } from 'react-router-dom';
 import { router } from './router';
 import { store } from './store'
 import { Provider } from 'react-redux'
+import { GlobalStyle } from './styles/GlobalStyle';
 //import { Header } from './components/header/Header';
 
 
@@ -16,6 +15,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
+      <GlobalStyle />
       <RouterProvider router={router}/>
     </Provider>
   </React.StrictMode>

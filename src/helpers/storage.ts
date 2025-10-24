@@ -18,7 +18,7 @@ export const loadFromLocalStorage = () => {
 
         // ✅ Гарантируем правильную структуру
         if (parsed && parsed.todoList && Array.isArray(parsed.todoList.todos)) {
-            return parsed; // всё ок
+            return parsed; 
         }
 
         // ✅ Восстанавливаем структуру, если что-то не так
